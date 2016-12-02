@@ -6,6 +6,7 @@
     "node": "6.7.0"
   },
   "scripts": {
+    "testAll": "npm run test; npm run test2",
     "test": "node ./test",
     "test2": "node ./test2"
   },

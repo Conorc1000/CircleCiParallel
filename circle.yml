@@ -10,7 +10,5 @@ general:
 
 test:
   override:
-    - npm run test:
-      parallel: true
-    - npm run test2:
+    - case $CIRCLE_NODE_INDEX in 0) npm t ;; 1) npm test2 ;; esac:
       parallel: true
