@@ -1,11 +1,9 @@
 var test = require('tape');
 
 test('this is the second test', function(t) {
-    console.log('test2 started: ');
 
     setTimeout(function(){
         t.equals( 1+1, 2);
-        console.log('test2 finshed: ');
         t.end()
-    }, 20000);
+    }, 40000);
 });
