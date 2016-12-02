@@ -10,7 +10,7 @@ general:
 
 test:
   override:
+    - npm run test
       parallel: true
-      files:
-        - npm run test    # can be a direct path to file or npm command
-        - npm run test2
+    - npm run test2
+      parallel: true
