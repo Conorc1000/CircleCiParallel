@@ -10,7 +10,6 @@ general:
 
 test:
   override:
-    - bundle exec rspec:
       parallel: true
       files:
         - npm run test    # can be a direct path to file or npm command
