@@ -6,7 +6,8 @@
     "node": "6.7.0"
   },
   "scripts": {
-    "test": "node ./test"
+    "test": "node ./test",
+    "test2": "node ./test2"
   },
   "repository": {
     "type": "git"
