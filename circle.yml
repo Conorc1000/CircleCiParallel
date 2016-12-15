@@ -1,3 +1,13 @@
+machine:
+  pre:
+    - sudo apt-get update; sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 10
+  node:
+    version: 6.0.0
+
+general:
+  artifacts:
+    - "test"
+
 test:
   override:
     - cd sc-*-linux && ./bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --tunnel-identifier myTunnel --readyfile ~/sauce_is_ready:
@@ -14,6 +24,10 @@ test:
     - killall --wait sc
 
 dependencies:
+  pre:
+    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 20
+    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 20
+    - sudo apt-get install pandoc
   post:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
