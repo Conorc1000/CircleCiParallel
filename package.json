@@ -6,17 +6,24 @@
     "node": "6.7.0"
   },
   "scripts": {
+    "start": "node ./server.js",
     "testAll": "npm run test; npm run test2",
     "test": "node ./test",
-    "test2": "node ./test2"
+    "test2": "node ./test2",
+    "e2e": "./node_modules/.bin/nightwatch --env local",
+    "test:e2eRemote": " ./node_modules/.bin/nightwatch -e ie11"
   },
   "repository": {
     "type": "git"
   },
   "author": "",
   "license": "MIT",
-
+  "dependencies": {
+    "env2": "^2.0.7"
+  },
   "devDependencies": {
+    "nightwatch": "^0.9.11",
+    "selenium-download": "^2.0.7",
     "tape": "^4.4.0"
   }
 }
