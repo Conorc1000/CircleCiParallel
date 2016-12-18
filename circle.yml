@@ -1,12 +1,3 @@
-machine:
-
-  node:
-    version: 6.0.0
-
-general:
-  artifacts:
-    - "test"
-
 test:
   override:
     - cd sc-*-linux && ./bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
