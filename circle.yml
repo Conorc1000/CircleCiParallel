@@ -1,3 +1,14 @@
+machine:
+  pre:
+    - sudo apt-get update; sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 10
+
+  node:
+    version: 6.0.0
+
+general:
+  artifacts:
+    - "test"
+
 test:
   override:
     - cd sc-*-linux && ./bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
