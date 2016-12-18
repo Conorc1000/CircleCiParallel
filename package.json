@@ -11,7 +11,8 @@
     "test": "node ./test",
     "test2": "node ./test2",
     "e2e": "./node_modules/.bin/nightwatch --env local",
-    "test:e2eRemote": " ./node_modules/.bin/nightwatch -e ie11"
+    "test:e2eRemote": " ./node_modules/.bin/nightwatch -e ie11",
+    "postinstall": "node nightwatch.conf.js"
   },
   "repository": {
     "type": "git"
